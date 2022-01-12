@@ -1,0 +1,15 @@
+<div class="modal-content">
+  <h3>Invest in Loan</h3>
+  <div>{{dataLoan.title}}</div>
+  <br>
+  <div>Amount available: &#xa3;{{dataLoan.available}}</div>
+  <div>Loan ends in: {{EndsIn}}</div>
+  <br>
+  Investment amount (&#xa3;)
+  <div>
+    <label>
+      <input [(ngModel)]="dataLoan.value" type="number">
+    </label>
+    <button (click)="passBack()" type="button" class="btn btn-warning">Invest</button>
+  </div>
+</div>

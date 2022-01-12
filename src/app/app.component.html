@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <h1>Current Loans</h1>
+  <div class="card" *ngFor="let item of dataLoans">
+    <div>
+      <h4>{{item.title}}</h4>
+      <div>Amounts: {{item.amount}}</div>
+      <div>Values: {{item.ltv}}</div>
+      <div>Annualised return: {{item.annualised_return}}</div>
+    </div>
+    <div>
+      <app-modal-container (passValue)="InvestAmount($event, findObject(dataLoans, item.id))" [title]="item.title" [term_remaining]="item.term_remaining" [available]="item.available"></app-modal-container>
+    </div>
+  </div>
+  <div>
+    Total amount available for investment: <span class="total-amount">{{TotalAmountInvestment | currency: "GBP"}}</span>
+  </div>
+</div>
+
+

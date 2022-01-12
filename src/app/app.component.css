@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: black solid 1px;
+  width: 70%;
+  margin: 5px;
+}
+
+.total-amount {
+  font-weight: bold;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  background: #f3f3f3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
